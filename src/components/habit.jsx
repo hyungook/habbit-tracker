@@ -9,16 +9,15 @@ class Habit extends Component {
         // state 오브젝트 안에 있는 count를 증가한 뒤 state를 업데이트 해야 함.
         // this.state.count += 1; : 감지하지 못함
         // this.setState({ count: this.state.count + 1});
-        this.props.onIncrement(this.props.habit.name);
+        this.props.onIncrement(this.props.habit);
     }
     handleDecrement = () => {
         // const count = this.state.count -1;
         // this.setState({ count: count < 0 ? 0 : count});
-        this.props.onDecrement(this.props.habit.name);
+        this.props.onDecrement(this.props.habit);
     }
-
     handleDelete = () => {
-        this.props.onDelete(this.props.habit.name);
+        this.props.onDelete(this.props.habit);
     }
 
     render() {
