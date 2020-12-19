@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class HabitAddForm extends Component {
+class HabitAddForm extends PureComponent {
     // 멤버변수를 정의한 후에 원하는 해당하는 대상에 연결하면 된다.
     formRef = React.createRef();
     inputRef = React.createRef();
