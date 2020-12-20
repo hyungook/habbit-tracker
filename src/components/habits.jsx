@@ -22,7 +22,7 @@ class Habits extends Component {
         return (
             <>
                 <HabitAddForm onAdd={this.handleAdd}/>
-                <ul>
+                <ul className="habit-ul">
                     {this.props.habits.map(habit => (
                         <Habit
                         key={habit.id}

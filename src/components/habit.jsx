@@ -1,6 +1,15 @@
 import React, {PureComponent} from 'react';
 
 class Habit extends PureComponent {
+
+    componentDidMount() {
+        console.log(`habit: ${this.props.habit.name} mounted`)
+    };
+
+    componentWillUnmount() {
+        console.log(`habit: ${this.props.habit.name} will unmount`)
+    };
+
     state={
         count:0,
     }
@@ -35,7 +44,7 @@ class Habit extends PureComponent {
             <button className={"habit-button habit-decrease"} onClick={this.handleDecrement}>
                 <i className={"fas fa-minus-square"}></i>
             </button>
-            <button className={"habit-button"} onClick={this.handleDelete}>
+            <button className={"habit-button habit-delete"} onClick={this.handleDelete}>
                 <i className={"fas fa-trash"}></i>
             </button>
         </li>

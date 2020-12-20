@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 button {
@@ -12,6 +14,10 @@ button {
   font-size: 2rem;
   padding: 1em;
   background-color: blanchedalmond;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar-logo {
@@ -32,12 +38,30 @@ button {
   border-radius: 50%;
 }
 
-.habits {
-  padding: 0.5em;
-  padding-top: 2em;
+.habit-ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
+.habits {
+  width: 100%;
+  padding: 0.5em;
+  padding-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
 .add-input {
+  width: 28rem;
   font-size: 2rem;
 }
 
@@ -48,7 +72,7 @@ button {
 .add-button {
   height: 100%;
   font-size: 1.5rem;
-  padding: 0.3em 0.5em;
+  padding: 0.3em 1em;
   background-color: green;
   color: white;
 }
@@ -57,6 +81,17 @@ button {
   font-size: 2.5rem;
   padding: 0.5em;
   list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom: 1px solid #99999930;
+}
+.habit-name {
+  display: inline-block;
+  max-width: 20rem;
+  width: 20rem;
+  word-break: break-all;
 }
 
 .habit-count {
@@ -94,8 +129,12 @@ button {
 }
 
 .habits-reset {
+  position: relative;
   font-size: 1.5rem;
   padding: 0.2em 1em;
   background-color: green;
   color: white;
+  right: -50%;
+  transform: translate(-50%, 0);
+  margin-top: 2rem;
 }
